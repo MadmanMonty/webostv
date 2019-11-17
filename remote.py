@@ -17,17 +17,10 @@ from homeassistant.const import (
     CONF_HOST,
     CONF_NAME,
     CONF_TIMEOUT,
-    STATE_OFF,
-    STATE_PAUSED,
-    STATE_PLAYING,
 )
 from homeassistant.helpers.entity import Entity
 
 from homeassistant.components.remote import (
-    ATTR_DELAY_SECS,
-    ATTR_NUM_REPEATS,
-    DEFAULT_DELAY_SECS,
-    DOMAIN,
     PLATFORM_SCHEMA,
     RemoteDevice,
 )
@@ -168,12 +161,6 @@ class LgWebOSRemote(remote.RemoteDevice):
     def name(self):
         """Return the name of the device."""
         return self._name
-
-    def turn_off(self):
-        return
-
-    def turn_on(self):
-        return
 
     @property
     def should_poll(self):
